@@ -1,80 +1,15 @@
-/* line 17, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html {
-  line-height: 1;
-}
-
-/* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
-}
-
-/* line 26, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* line 28, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-/* line 30, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 103, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-/* line 32, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
-}
-
-/* line 116, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
-}
-
 @font-face {
   font-family: "MontBold";
-  src: url('/socialgeo/assets/fonts/Montserrat-Bold.eot');
-  src: url('/socialgeo/assets/fonts/Montserrat-Bold.eot?#iefix') format('eot'), url('/socialgeo/assets/fonts/Montserrat-Bold.woff') format('woff'), url('/socialgeo/assets/fonts/Montserrat-Bold.ttf') format('truetype'), url('/socialgeo/assets/fonts/Montserrat-Bold.svg#MontBold') format('svg');
+  src: url('/socialgeo/SLICE/assets/fonts/Montserrat-Bold.eot');
+  src: url('/socialgeo/SLICE/assets/fonts/Montserrat-Bold.eot?#iefix') format('eot'), url('/socialgeo/SLICE/assets/fonts/Montserrat-Bold.woff') format('woff'), url('/socialgeo/SLICE/assets/fonts/Montserrat-Bold.ttf') format('truetype'), url('/socialgeo/SLICE/assets/fonts/Montserrat-Bold.svg#MontBold') format('svg');
   font-weight: "normal";
   font-style: "normal";
 }
 
 @font-face {
   font-family: "MontReg";
-  src: url('/socialgeo/assets/fonts/Montserrat-Regular.eot');
-  src: url('/socialgeo/assets/fonts/Montserrat-Regular.eot?#iefix') format('eot'), url('/socialgeo/assets/fonts/Montserrat-Regular.woff') format('woff'), url('/socialgeo/assets/fonts/Montserrat-Regular.ttf') format('truetype'), url('/socialgeo/assets/fonts/Montserrat-Regular.svg#MontReg') format('svg');
+  src: url('/socialgeo/SLICE/assets/fonts/Montserrat-Regular.eot');
+  src: url('/socialgeo/SLICE/assets/fonts/Montserrat-Regular.eot?#iefix') format('eot'), url('/socialgeo/SLICE/assets/fonts/Montserrat-Regular.woff') format('woff'), url('/socialgeo/SLICE/assets/fonts/Montserrat-Regular.ttf') format('truetype'), url('/socialgeo/SLICE/assets/fonts/Montserrat-Regular.svg#MontReg') format('svg');
   font-weight: "normal";
   font-style: "normal";
 }
@@ -95,27 +30,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   background: #f1f6fb;
   color: #5d92cb;
+  font-family: 'MontReg';
 }
 
-/* line 21, ../sass/app.scss */
+/* line 22, ../sass/app.scss */
 .contentwrapper {
   width: 960px;
   position: relative;
   margin: 0 auto;
 }
 
-/* line 27, ../sass/app.scss */
+/* line 28, ../sass/app.scss */
 header {
   z-index: 999;
   color: #f1f6fb;
 }
 
-/* line 32, ../sass/app.scss */
+/* line 33, ../sass/app.scss */
 .navbar {
   border: none;
 }
 
-/* line 36, ../sass/app.scss */
+/* line 37, ../sass/app.scss */
 .navbar-inverse .navbar-inner {
   background: #5d92cb;
   border: none;
@@ -124,7 +60,7 @@ header {
   box-shadow: none;
 }
 
-/* line 42, ../sass/app.scss */
+/* line 43, ../sass/app.scss */
 .navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus, .navbar-inverse .nav > li > a:hover {
   color: #f1f6fb;
   background: no-repeat;
@@ -135,28 +71,28 @@ header {
   box-shadow: none;
 }
 
-/* line 50, ../sass/app.scss */
+/* line 51, ../sass/app.scss */
 .navbar-inverse .brand, .navbar-inverse .nav > li > a {
   color: #f1f6fb;
   text-shadow: none;
   text-transform: uppercase;
 }
 
-/* line 56, ../sass/app.scss */
+/* line 57, ../sass/app.scss */
 .navbar .brand {
   font-family: 'MontBold';
   font-size: 0.9em;
   line-height: 1.2em;
 }
 
-/* line 62, ../sass/app.scss */
+/* line 63, ../sass/app.scss */
 .navbar .nav > li > a {
   padding: 10px 0 9px;
   margin-left: 10px;
   margin-right: 10px;
 }
 
-/* line 68, ../sass/app.scss */
+/* line 69, ../sass/app.scss */
 .navbar-inverse .nav > li > a {
   font-family: 'MontReg';
   font-size: 0.9em;
@@ -164,19 +100,19 @@ header {
   letter-spacing: 0.2em;
 }
 
-/* line 75, ../sass/app.scss */
+/* line 76, ../sass/app.scss */
 .spacer {
   position: relative;
   height: 60px;
   width: 100%;
 }
 
-/* line 81, ../sass/app.scss */
+/* line 82, ../sass/app.scss */
 #main {
   position: relative;
 }
 
-/* line 85, ../sass/app.scss */
+/* line 86, ../sass/app.scss */
 .contact-map {
   width: 100%;
   height: 500px;
@@ -184,14 +120,14 @@ header {
 
 /* Sticky footer styles
      -------------------------------------------------- */
-/* line 101, ../sass/app.scss */
+/* line 102, ../sass/app.scss */
 html, body {
   height: 100%;
   /* The html and body elements cannot have any padding or margin. */
 }
 
 /* Wrapper for page content to push down footer */
-/* line 107, ../sass/app.scss */
+/* line 108, ../sass/app.scss */
 #wrap {
   min-height: 100%;
   height: auto !important;
@@ -201,19 +137,19 @@ html, body {
 }
 
 /* Set the fixed height of the footer here */
-/* line 116, ../sass/app.scss */
+/* line 117, ../sass/app.scss */
 #push, footer {
   height: 60px;
 }
 
-/* line 120, ../sass/app.scss */
+/* line 121, ../sass/app.scss */
 footer {
   background-color: #f5f5f5;
 }
 
 /* Lastly, apply responsive CSS fixes as necessary */
 @media (max-width: 767px) {
-  /* line 126, ../sass/app.scss */
+  /* line 127, ../sass/app.scss */
   footer {
     margin-left: -20px;
     margin-right: -20px;
