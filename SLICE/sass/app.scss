@@ -40,6 +40,26 @@ header {
 	@include box-shadow (none);
 }
 
+
+.navbar .brand {
+	font-family: 'MontBold';
+	font-size: 0.9em;
+	line-height: 1.2em;
+}
+
+.navbar .nav > li > a {
+	padding: 10px 0 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.navbar-inverse .nav > li > a {
+	font-family: 'MontReg';
+	font-size: 0.9em;
+	line-height: 1.2em;	
+	letter-spacing: 0.2em;
+}
+
 .navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus,  .navbar-inverse .nav > li > a:hover {
 	color: $nonwhite;
 	background: no-repeat;
@@ -54,24 +74,6 @@ header {
 	text-transform: uppercase;
 }
 
-.navbar .brand {
-	font-family: 'MontBold';
-	font-size: 0.9em;
-	line-height: 1.2em;
-}
-
-.navbar .nav > li > a {
-	padding: 10px 0 9px;
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
-.navbar-inverse .nav > li > a {
-	font-family: 'MontReg';
-	font-size: 0.9em;
-	line-height: 1.2em;	
-	letter-spacing: 0.2em;
-}
 
 .spacer {
 	position: relative;
@@ -83,11 +85,151 @@ header {
 	position: relative;
 }
 
-.contact-map {
+
+.a-map {
 	width: 100%;
-	height: 500px;
 }
 
+
+
+/* COMMON TYPO */
+h1{
+	font-size: 1.6em;
+	font-weight: 400;
+	font-family: 'MontBold';
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	margin: 10px 0 20px 0;
+	padding: 0;
+	line-height: 1em;
+	color: $dblue;
+}
+
+h2 {
+	font-size: 1.2em;
+	font-weight: 400;
+	font-family: 'MontBold';
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	margin: 0 0 15px 0;
+	padding: 0;
+	line-height: 1em;
+	color: $dblue;
+	
+	a {
+		color: $dblue;
+		@include transition(all 0.5s);
+		
+		&:hover, &:visited, &:active {
+			text-decoration: none;
+		}
+	}
+}
+
+h3 {
+	font-size: 1.2em;
+	font-weight: 400;
+	font-family: 'MontReg';
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	margin: 0 0 15px 0;
+	padding: 0 0 10px 0;
+	line-height: 1em;
+	color: $bluetxt;
+	
+
+}
+
+legend {
+	color: $dblue;
+	border-bottom-color: $bblue;
+	margin-bottom: 0px;
+	padding-top: 20px;
+}
+
+.date {
+	font-size: 0.9em;
+	color: $blue1;
+	margin: 0 15px;
+}
+
+
+
+span.date, h2.newstitle, h2.eventtitle {
+	display: inline;
+}
+
+.newstxt, .eventtxt {
+	margin-top: 5px;
+	margin-left: 15px;
+}
+
+.newscont, .eventcont{
+	
+	.newstxt, .eventtxt {
+		display: none;
+	}
+	
+	.newsitem, .eventitem {
+		border-bottom: 1px solid $bblue;
+	}
+}
+
+.mainselection {
+	
+	h3, h4{
+		text-align: center;
+	}
+	
+	h4 {
+		font-weight: 400;
+		font-size: 0.9em;
+		margin: 0;
+		padding: 0;
+	}
+	
+	
+	.newsitem, .eventitem {
+		margin-bottom: 30px;
+	}
+	
+	.row-fluid {
+		margin-top: 40px;
+	}
+
+	
+}
+
+h5 {
+		font-weight: 400;
+		color: $dblue;
+		margin: 0 0 0;
+		padding: 0;
+	}
+
+.eventtxt p {
+	margin: 0;
+}
+
+.newsitem, .eventitem {
+	margin-top: 15px;
+	padding-bottom: 15px;
+}
+
+
+
+/* GENTSE WIJKEN */
+.wijken-list {
+	ul {
+		margin: 0;
+		padding-left: 15px;
+		border-left: 1px solid $bblue;
+		
+		li {
+			list-style-type: none;
+		}
+	}
+}
 
 
 /* EDIT PROFILE */
@@ -107,6 +249,8 @@ header {
 		}
 	}
 }
+
+
 
 
 
@@ -149,4 +293,6 @@ footer {
 		padding-right: 20px;
 	}
 }
+
+
 
