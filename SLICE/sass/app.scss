@@ -90,6 +90,24 @@ header {
 
 
 
+/* EDIT PROFILE */
+.edit-profile {
+	.row-fluid {
+		margin: 20px 0;
+	}
+	
+	#user-avatar {
+		float: left;
+		border: 2px solid #fff;
+	}
+	
+	#avatarhandlers {
+		button {
+			display: list-item;
+		}
+	}
+}
+
 
 
 
