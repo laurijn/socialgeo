@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Socialgeo\EventBundle\Entity\Event;
-use Socialgeo\EventBundle\Form\EventType;
+
 
 /**
  * Event controller.
@@ -20,13 +20,19 @@ class EventController extends Controller
      */
     public function indexAction()
     {
+        //$user = $this->container->get('fos_user.user_manager')
+        //            ->findUserByUsername('laurijn');
+        $user = $this->container->get('security.context')
+                    ->getToken()
+                    ->getUser();
+
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('EventBundle:Event')->findAll();
 
-        return $this->render('EventBundle:Event:index.html.twig', array(
-            'entities' => $entities,
+        return $this->render('EventBundle:Event:index.html.twig', array('entities' => $entities, 'user' => $user
         ));
+
     }
 
     /**
