@@ -458,8 +458,8 @@
     <parameter key="jms_di_extra.directories" type="collection"/>
     <parameter key="jms_di_extra.cache_dir">/Applications/MAMP/htdocs/socialgeo/app/cache/dev/jms_diextra</parameter>
     <parameter key="jms_di_extra.doctrine_integration">true</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">/Applications/MAMP/htdocs/socialgeo/app/cache/dev/jms_diextra/doctrine/EntityManager_50eb63caa85b4.php</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager50eb63caa85b4_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">/Applications/MAMP/htdocs/socialgeo/app/cache/dev/jms_diextra/doctrine/EntityManager_50ed524b92de7.php</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager50ed524b92de7_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
     <parameter key="security.secured_services" type="collection"/>
     <parameter key="security.access.method_interceptor.class">JMS\SecurityExtraBundle\Security\Authorization\Interception\MethodSecurityInterceptor</parameter>
     <parameter key="security.access.method_access_control" type="collection"/>
@@ -2361,7 +2361,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider" public="false">
-            <argument type="service" id="fos_user.user_provider.username"/>
+            <argument type="service" id="fos_user.user_provider.username_email"/>
             <argument type="service" id="security.user_checker"/>
             <argument>main</argument>
             <argument type="service" id="security.encoder_factory"/>
@@ -2370,7 +2370,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>50eb63ca8d995</argument>
+            <argument>50ed524b683a5</argument>
           </service>
         </argument>
       </argument>
@@ -2487,7 +2487,7 @@
           <service class="Symfony\Component\Security\Http\Firewall\ContextListener" public="false">
             <argument type="service" id="security.context"/>
             <argument type="collection">
-              <argument type="service" id="fos_user.user_provider.username"/>
+              <argument type="service" id="fos_user.user_provider.username_email"/>
             </argument>
             <argument>main</argument>
             <argument type="service" id="monolog.logger.security"/>
@@ -2592,7 +2592,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>50eb63ca8d995</argument>
+            <argument>50ed524b683a5</argument>
             <argument type="service" id="monolog.logger.security"/>
           </service>
         </argument>
@@ -2998,8 +2998,8 @@
     <service id="doctrine.orm.default_manager_configurator" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator">
       <argument type="collection"/>
     </service>
-    <service id="doctrine.orm.default_entity_manager" class="EntityManager50eb63caa85b4_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
-      <file>/Applications/MAMP/htdocs/socialgeo/app/cache/dev/jms_diextra/doctrine/EntityManager_50eb63caa85b4.php</file>
+    <service id="doctrine.orm.default_entity_manager" class="EntityManager50ed524b92de7_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
+      <file>/Applications/MAMP/htdocs/socialgeo/app/cache/dev/jms_diextra/doctrine/EntityManager_50ed524b92de7.php</file>
       <argument type="service">
         <service class="Doctrine\ORM\EntityManager" factory-method="create" public="false">
           <argument type="service" id="doctrine.dbal.default_connection"/>
@@ -3258,7 +3258,7 @@
       <argument type="service" id="security.authentication.session_strategy"/>
       <argument type="service" id="service_container"/>
     </service>
-    <service id="fos_user.user_provider.username" class="FOS\UserBundle\Security\UserProvider" public="false">
+    <service id="fos_user.user_provider.username_email" class="FOS\UserBundle\Security\EmailUserProvider" public="false">
       <argument type="service" id="fos_user.user_manager"/>
     </service>
     <service id="fos_user.util.user_manipulator" class="FOS\UserBundle\Util\UserManipulator">

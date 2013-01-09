@@ -48,6 +48,18 @@ class User extends \Socialgeo\UserBundle\Entity\User implements \Doctrine\ORM\Pr
         return parent::setName($name);
     }
 
+    public function setEmail($email)
+    {
+        $this->__load();
+        return parent::setEmail($email);
+    }
+
+    public function setUsername($username)
+    {
+        $this->__load();
+        return parent::setUsername($username);
+    }
+
     public function getName()
     {
         $this->__load();
@@ -213,12 +225,6 @@ class User extends \Socialgeo\UserBundle\Entity\User implements \Doctrine\ORM\Pr
         return parent::removeRole($role);
     }
 
-    public function setUsername($username)
-    {
-        $this->__load();
-        return parent::setUsername($username);
-    }
-
     public function setUsernameCanonical($usernameCanonical)
     {
         $this->__load();
@@ -235,12 +241,6 @@ class User extends \Socialgeo\UserBundle\Entity\User implements \Doctrine\ORM\Pr
     {
         $this->__load();
         return parent::setCredentialsExpired($boolean);
-    }
-
-    public function setEmail($email)
-    {
-        $this->__load();
-        return parent::setEmail($email);
     }
 
     public function setEmailCanonical($emailCanonical)

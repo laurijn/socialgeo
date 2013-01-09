@@ -33,6 +33,10 @@
 
 <body>
 
+
+
+
+
 <section id="wrap">
     <header class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
@@ -62,7 +66,7 @@
                         <li><a href="#media"><i class="icon-glass icon-white"></i></a></li>
 
                     {% else %}
-                        <li><a href="{{ path('fos_user_security_login') }}">Login</a></li>
+                        {% block login %}{% endblock %}
                     {% endif %}
 
                     </nav>
@@ -99,7 +103,7 @@
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqGoCruJyrUzxz3V4ON0JyOAGnzKZo21U&sensor=false"></script>
 
 <!-- Initialize JS APP -->
-<script src="{{ asset('bundles/event/js/app.css') }}"></script>
+<script src="{{ asset('bundles/event/js/app.js') }}"></script>
 {% block javascripts %}{% endblock %}
 </body>
 

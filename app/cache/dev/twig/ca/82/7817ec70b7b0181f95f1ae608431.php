@@ -13,6 +13,7 @@ class __TwigTemplate_ca827817ec70b7b0181f95f1ae608431 extends Twig_Template
             'title' => array($this, 'block_title'),
             'stylesheets' => array($this, 'block_stylesheets'),
             'user' => array($this, 'block_user'),
+            'login' => array($this, 'block_login'),
             'body' => array($this, 'block_body'),
             'javascripts' => array($this, 'block_javascripts'),
         );
@@ -61,6 +62,10 @@ class __TwigTemplate_ca827817ec70b7b0181f95f1ae608431 extends Twig_Template
 
 <body>
 
+
+
+
+
 <section id=\"wrap\">
     <header class=\"navbar navbar-inverse navbar-fixed-top\">
         <div class=\"navbar-inner\">
@@ -74,14 +79,14 @@ class __TwigTemplate_ca827817ec70b7b0181f95f1ae608431 extends Twig_Template
                 <div class=\"nav-collapse collapse\">
                     <nav class=\"nav\">
                         <li class=\"active\"><a href=\"";
-        // line 48
+        // line 52
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("event"), "html", null, true);
         echo "\">HOME</a></li>
                         <li><a href=\"#evenementen\">EVENEMENTEN</a></li>
                         <li><a href=\"#media\">MEDIA</a></li>
                         <li><a href=\"#wijken\">WIJKEN</a></li>
                         <li><a href=\"#wijken\">";
-        // line 52
+        // line 56
         $this->displayBlock('user', $context, $blocks);
         echo "</a></li>
                     </nav>
@@ -89,9 +94,9 @@ class __TwigTemplate_ca827817ec70b7b0181f95f1ae608431 extends Twig_Template
                     <nav class=\"nav pull-right\">
 
                     ";
-        // line 57
+        // line 61
         if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
-            // line 58
+            // line 62
             echo "                        <li><a href=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("fos_user_profile_show"), "html", null, true);
             echo "\"><i class=\"icon-user icon-white\"></i></a></li>
@@ -102,13 +107,13 @@ class __TwigTemplate_ca827817ec70b7b0181f95f1ae608431 extends Twig_Template
 
                     ";
         } else {
-            // line 65
-            echo "                        <li><a href=\"";
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("fos_user_security_login"), "html", null, true);
-            echo "\">Login</a></li>
-                    ";
+            // line 69
+            echo "                        ";
+            $this->displayBlock('login', $context, $blocks);
+            // line 70
+            echo "                    ";
         }
-        // line 67
+        // line 71
         echo "
                     </nav>
                 </div><!--/.nav-collapse -->
@@ -120,9 +125,9 @@ class __TwigTemplate_ca827817ec70b7b0181f95f1ae608431 extends Twig_Template
     <section class=\"container\" id=\"main\">
 
         ";
-        // line 77
+        // line 81
         $this->displayBlock('body', $context, $blocks);
-        // line 78
+        // line 82
         echo "
     </section>
     <div id=\"push\"></div>
@@ -141,11 +146,11 @@ class __TwigTemplate_ca827817ec70b7b0181f95f1ae608431 extends Twig_Template
 <!-- Included JS Files (Compressed) -->
 <script src=\"http://code.jquery.com/jquery-latest.js\"></script>
 <script src=\"";
-        // line 95
+        // line 99
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/event/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 96
+        // line 100
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/event/images/glyphicons-halflings.png"), "html", null, true);
         echo "\"></script>
 
@@ -154,13 +159,13 @@ class __TwigTemplate_ca827817ec70b7b0181f95f1ae608431 extends Twig_Template
 
 <!-- Initialize JS APP -->
 <script src=\"";
-        // line 102
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/event/js/app.css"), "html", null, true);
+        // line 106
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/event/js/app.js"), "html", null, true);
         echo "\"></script>
 ";
-        // line 103
+        // line 107
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 104
+        // line 108
         echo "</body>
 
 </html>
@@ -191,17 +196,22 @@ class __TwigTemplate_ca827817ec70b7b0181f95f1ae608431 extends Twig_Template
     ";
     }
 
-    // line 52
+    // line 56
     public function block_user($context, array $blocks = array())
     {
     }
 
-    // line 77
+    // line 69
+    public function block_login($context, array $blocks = array())
+    {
+    }
+
+    // line 81
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 103
+    // line 107
     public function block_javascripts($context, array $blocks = array())
     {
     }
@@ -218,6 +228,6 @@ class __TwigTemplate_ca827817ec70b7b0181f95f1ae608431 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  205 => 103,  200 => 77,  195 => 52,  189 => 21,  185 => 20,  180 => 19,  177 => 18,  171 => 16,  164 => 104,  162 => 103,  158 => 102,  149 => 96,  145 => 95,  126 => 78,  124 => 77,  112 => 67,  106 => 65,  95 => 58,  93 => 57,  85 => 52,  78 => 48,  52 => 25,  48 => 23,  41 => 16,  24 => 1,  72 => 20,  67 => 18,  60 => 14,  55 => 12,  51 => 11,  46 => 18,  42 => 8,  39 => 7,  33 => 5,  31 => 4,  28 => 3,);
+        return array (  215 => 107,  210 => 81,  205 => 69,  200 => 56,  194 => 21,  190 => 20,  185 => 19,  182 => 18,  176 => 16,  169 => 108,  167 => 107,  163 => 106,  154 => 100,  150 => 99,  131 => 82,  129 => 81,  117 => 71,  114 => 70,  111 => 69,  100 => 62,  98 => 61,  90 => 56,  83 => 52,  53 => 25,  49 => 23,  47 => 18,  42 => 16,  25 => 1,  31 => 4,  28 => 3,);
     }
 }

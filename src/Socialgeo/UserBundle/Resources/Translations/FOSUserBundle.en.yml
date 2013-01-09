@@ -89,9 +89,20 @@ layout:
 form:
     group_name: "Group name:"
     username: "Username:"
+    username_placeholder: "choose username (optional)"
+
     email: "Email:"
+    email_placeholder: "enter email"
+
     current_password: "Current password:"
+
     password: "Password:"
-    password_confirmation: "Verification:"
+    password_placeholder: "choose password"
+
+    password_confirmation: "Retype password:"
+    password_confirmation_placeholder: "retype password"
+
     new_password: "New password:"
+
     new_password_confirmation: "Verification:"
+    new_password_confirmation_placeholder: "verification:"

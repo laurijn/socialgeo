@@ -137,9 +137,14 @@ the Team.
     'form.email' => 'Email:',
     'form.current_password' => 'Current password:',
     'form.password' => 'Password:',
-    'form.password_confirmation' => 'Verification:',
+    'form.password_confirmation' => 'Retype password:',
     'form.new_password' => 'New password:',
     'form.new_password_confirmation' => 'Verification:',
+    'form.username_placeholder' => 'choose username (optional)',
+    'form.email_placeholder' => 'enter email',
+    'form.password_placeholder' => 'choose password',
+    'form.password_confirmation_placeholder' => 'retype password',
+    'form.new_password_confirmation_placeholder' => 'verification:',
   ),
 ));
 

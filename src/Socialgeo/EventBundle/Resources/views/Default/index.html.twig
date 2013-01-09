@@ -1,9 +1,11 @@
 {% extends '::base.html.twig' %}
 
-{% block body %}
+{% block login %}
 
-    {% for i in 1..count %}
-        Hello {{ event.name }}! {{ count }}
-    {% endfor %}
+    <form class="navbar-form pull-right">
+        <input type="text" class="input-small" placeholder="Email">
+        <input type="password" class="input-small" placeholder="Password">
+        <button type="submit" class="btn">Sign in</button>
+    </form>
 
 {% endblock %}

@@ -7,7 +7,7 @@ class __TwigTemplate_3e15803bfb777c3780192c4601d6bf32 extends Twig_Template
     {
         parent::__construct($env);
 
-        $this->parent = $this->env->loadTemplate("::base.html.twig");
+        $this->parent = $this->env->loadTemplate("EventBundle:Default:index.html.twig");
 
         $this->blocks = array(
             'body' => array($this, 'block_body'),
@@ -16,7 +16,7 @@ class __TwigTemplate_3e15803bfb777c3780192c4601d6bf32 extends Twig_Template
 
     protected function doGetParent(array $context)
     {
-        return "::base.html.twig";
+        return "EventBundle:Default:index.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())

@@ -26,12 +26,15 @@ class EventController extends Controller
                     ->getToken()
                     ->getUser();
 
+
+
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('EventBundle:Event')->findAll();
 
-        return $this->render('EventBundle:Event:index.html.twig', array('entities' => $entities, 'user' => $user
-        ));
+        $data = array('entities' => $entities, 'user' => $user);
+
+        return $this->render('EventBundle:Event:index.html.twig', $data );
 
     }
 

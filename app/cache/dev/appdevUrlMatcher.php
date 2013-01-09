@@ -140,7 +140,7 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         not_event_create:
 
         // event_edit
-        if (preg_match('#^/(?P<id>[^/]+)/edit$#s', $pathinfo, $matches)) {
+        if (preg_match('#^/(?P<id>[^/]+)/edits$#s', $pathinfo, $matches)) {
             return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Socialgeo\\EventBundle\\Controller\\EventController::editAction',)), array('_route' => 'event_edit'));
         }
 
@@ -211,7 +211,16 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                     return $this->redirect($pathinfo.'/', 'fos_user_registration_register');
                 }
 
-                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\RegistrationController::registerAction',  '_route' => 'fos_user_registration_register',);
+                return array (  '_controller' => 'Socialgeo\\UserBundle\\Controller\\RegistrationController::registerAction',  '_route' => 'fos_user_registration_register',);
+            }
+
+            // fos_user_registration_step
+            if (rtrim($pathinfo, '/') === '/register') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'fos_user_registration_step');
+                }
+
+                return array (  '_controller' => 'Socialgeo\\UserBundle\\Controller\\RegistrationController::stepAction',  '_route' => 'fos_user_registration_step',);
             }
 
             // fos_user_registration_check_email
@@ -221,7 +230,7 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                     goto not_fos_user_registration_check_email;
                 }
 
-                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\RegistrationController::checkEmailAction',  '_route' => 'fos_user_registration_check_email',);
+                return array (  '_controller' => 'Socialgeo\\UserBundle\\Controller\\RegistrationController::checkEmailAction',  '_route' => 'fos_user_registration_check_email',);
             }
             not_fos_user_registration_check_email:
 
@@ -232,7 +241,7 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                     goto not_fos_user_registration_confirm;
                 }
 
-                return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'FOS\\UserBundle\\Controller\\RegistrationController::confirmAction',)), array('_route' => 'fos_user_registration_confirm'));
+                return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Socialgeo\\UserBundle\\Controller\\RegistrationController::confirmAction',)), array('_route' => 'fos_user_registration_confirm'));
             }
             not_fos_user_registration_confirm:
 
@@ -243,7 +252,7 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                     goto not_fos_user_registration_confirmed;
                 }
 
-                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\RegistrationController::confirmedAction',  '_route' => 'fos_user_registration_confirmed',);
+                return array (  '_controller' => 'Socialgeo\\UserBundle\\Controller\\RegistrationController::confirmedAction',  '_route' => 'fos_user_registration_confirmed',);
             }
             not_fos_user_registration_confirmed:
 

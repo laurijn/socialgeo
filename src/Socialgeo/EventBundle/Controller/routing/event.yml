@@ -16,7 +16,7 @@ event_create:
     requirements: { _method: post }
 
 event_edit:
-    pattern:  /{id}/edit
+    pattern:  /{id}/editer
     defaults: { _controller: "EventBundle:Event:edit" }
 
 event_update:
