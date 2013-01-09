@@ -28,3 +28,8 @@ event_delete:
     pattern:  /{id}/delete
     defaults: { _controller: "EventBundle:Event:delete" }
     requirements: { _method: post }
+
+event_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "EventBundle:Event:delete" }
+    requirements: { _method: post }

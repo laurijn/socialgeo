@@ -104,9 +104,14 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // event_homepage
-        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]+)/(?P<counter>[^/]+)$#s', $pathinfo, $matches)) {
-            return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Socialgeo\\EventBundle\\Controller\\DefaultController::indexAction',)), array('_route' => 'event_homepage'));
+        // wijken
+        if ($pathinfo === '/wijken') {
+            return array (  '_controller' => 'Socialgeo\\EventBundle\\Controller\\WijkController::indexAction',  '_route' => 'wijken',);
+        }
+
+        // wijken_show
+        if (0 === strpos($pathinfo, '/wijken') && preg_match('#^/wijken/(?P<naam>[^/]+)$#s', $pathinfo, $matches)) {
+            return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Socialgeo\\EventBundle\\Controller\\WijkController::showwijkAction',)), array('_route' => 'wijken_show'));
         }
 
         // event

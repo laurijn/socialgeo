@@ -84,7 +84,10 @@ class __TwigTemplate_ca827817ec70b7b0181f95f1ae608431 extends Twig_Template
         echo "\">HOME</a></li>
                         <li><a href=\"#evenementen\">EVENEMENTEN</a></li>
                         <li><a href=\"#media\">MEDIA</a></li>
-                        <li><a href=\"#wijken\">WIJKEN</a></li>
+                        <li><a href=\"";
+        // line 55
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("wijken"), "html", null, true);
+        echo "\">WIJKEN</a></li>
                         <li><a href=\"#wijken\">";
         // line 56
         $this->displayBlock('user', $context, $blocks);
@@ -228,6 +231,6 @@ class __TwigTemplate_ca827817ec70b7b0181f95f1ae608431 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  215 => 107,  210 => 81,  205 => 69,  200 => 56,  194 => 21,  190 => 20,  185 => 19,  182 => 18,  176 => 16,  169 => 108,  167 => 107,  163 => 106,  154 => 100,  150 => 99,  131 => 82,  129 => 81,  117 => 71,  114 => 70,  111 => 69,  100 => 62,  98 => 61,  83 => 52,  53 => 25,  49 => 23,  47 => 18,  42 => 16,  25 => 1,  35 => 6,  122 => 52,  115 => 47,  103 => 41,  97 => 38,  90 => 56,  86 => 33,  80 => 32,  76 => 31,  72 => 30,  66 => 29,  63 => 28,  59 => 27,  39 => 9,  33 => 7,  31 => 4,  28 => 3,);
+        return array (  218 => 107,  213 => 81,  208 => 69,  203 => 56,  197 => 21,  193 => 20,  188 => 19,  185 => 18,  179 => 16,  172 => 108,  170 => 107,  166 => 106,  157 => 100,  153 => 99,  134 => 82,  132 => 81,  120 => 71,  117 => 70,  114 => 69,  103 => 62,  101 => 61,  93 => 56,  89 => 55,  83 => 52,  53 => 25,  49 => 23,  47 => 18,  42 => 16,  25 => 1,);
     }
 }

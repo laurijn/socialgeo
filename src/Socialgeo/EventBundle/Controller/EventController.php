@@ -35,6 +35,15 @@ class EventController extends Controller
 
     }
 
+
+    public function wijkAction()
+    {
+         var_dump("hallo");
+        die;
+
+    }
+
+
     /**
      * Finds and displays a Event entity.
      *

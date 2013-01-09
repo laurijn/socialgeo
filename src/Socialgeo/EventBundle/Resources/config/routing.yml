@@ -1,6 +1,9 @@
 _default_import:
     resource: routing/default.yml
 
+_default_import:
+    resource: routing/wijken.yml
+
 EventBundle_event:
     resource: "@EventBundle/Resources/config/routing/event.yml"
     prefix:   /
