@@ -29,12 +29,11 @@ class __TwigTemplate_30a8cbafb561edbb89703b786f8e1046 extends Twig_Template
     {
         // line 4
         echo "
-    <form class=\"navbar-form pull-right\">
-        <input type=\"text\" class=\"input-small\" placeholder=\"Email\">
-        <input type=\"password\" class=\"input-small\" placeholder=\"Password\">
-        <button type=\"submit\" class=\"btn\">Sign in</button>
-    </form>
-
+    ";
+        // line 5
+        echo $this->env->getExtension('actions')->renderAction("FOSUserBundle:Security:login", array(), array());
+        // line 6
+        echo "
 ";
     }
 
@@ -50,6 +49,6 @@ class __TwigTemplate_30a8cbafb561edbb89703b786f8e1046 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  31 => 4,  28 => 3,);
+        return array (  36 => 6,  34 => 5,  31 => 4,  28 => 3,);
     }
 }

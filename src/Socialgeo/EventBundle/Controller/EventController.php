@@ -26,8 +26,6 @@ class EventController extends Controller
                     ->getToken()
                     ->getUser();
 
-
-
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('EventBundle:Event')->findAll();

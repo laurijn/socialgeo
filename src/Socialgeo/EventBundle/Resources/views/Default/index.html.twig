@@ -2,10 +2,6 @@
 
 {% block login %}
 
-    <form class="navbar-form pull-right">
-        <input type="text" class="input-small" placeholder="Email">
-        <input type="password" class="input-small" placeholder="Password">
-        <button type="submit" class="btn">Sign in</button>
-    </form>
+    {% render 'FOSUserBundle:Security:login' %}
 
 {% endblock %}
