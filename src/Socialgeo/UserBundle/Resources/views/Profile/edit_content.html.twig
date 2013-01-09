@@ -1,28 +1,121 @@
 <form action="{{ path('fos_user_profile_edit') }}" {{ form_enctype(form) }} method="POST" class="fos_user_profile_edit">
-    <div>
-    {{ form_label(form.email) }}
-    </label>
-    {{ form_widget(form.email) }}
-    <span class="help-block">
-    {{ form_errors(form.email) }}
-    <div>
-    <div>
-        {{ form_label(form.username) }}
-        </label>
-        {{ form_widget(form.username) }}
-        <span class="help-block">
-        {{ form_errors(form.username) }}
-    <div>
 
-        <div>
+
+    <div class="row-fluid control-group">
+        <div class="span2">
+            {{ form_label(form.email) }}
+        </div>
+        <div class="span3">
+            {{ form_widget(form.email) }}
+        </div>
+        <div class="span7 help-block">
+            {{ form_errors(form.email) }}
+        </div>
+    </div>
+    <div class="row-fluid control-group">
+        <div class="span2">
+            {{ form_label(form.username) }}
+        </div>
+        <div class="span3">
+            {{ form_widget(form.username) }}
+        </div>
+        <div class="span7 help-block">
+            {{ form_errors(form.username) }}
+        </div>
+    </div>
+    <div class="row-fluid control-group">
+        <div class="span2">
             {{ form_label(form.name) }}
-            </label>
+        </div>
+        <div class="span3">
             {{ form_widget(form.name) }}
-            <span class="help-block">
-        {{ form_errors(form.name) }}
-                <div>
+        </div>
+        <div class="span7 help-block">
+            {{ form_errors(form.name) }}
+        </div>
+    </div>
+    <div class="row-fluid control-group">
+        <div class="span2">
+            {{ form_label(form.lastname) }}
+        </div>
+        <div class="span3">
+            {{ form_widget(form.lastname) }}
+        </div>
+        <div class="span7 help-block">
+            {{ form_errors(form.lastname) }}
+        </div>
+    </div>
+    <div class="row-fluid control-group">
+        <div class="span2">
+            {{ form_label(form.gender) }}
+        </div>
+        <div class="span3">
+            {{ form_widget(form.gender) }}
+        </div>
+        <div class="span7 help-block">
+            {{ form_errors(form.gender) }}
+        </div>
+    </div>
+    <div class="row-fluid control-group">
+        <div class="span2">
+            {{ form_label(form.birthday) }}
+        </div>
+        <div class="span3">
+            {{ form_widget(form.birthday) }}
+        </div>
+        <div class="span7 help-block">
+            {{ form_errors(form.birthday) }}
+        </div>
+    </div>
+    <div class="row-fluid control-group">
+        <div class="span2">
+            {{ form_label(form.nationality) }}
+        </div>
+        <div class="span3">
+            {{ form_widget(form.nationality) }}
+        </div>
+        <div class="span7 help-block">
+            {{ form_errors(form.nationality) }}
+        </div>
+    </div>
+    <div class="row-fluid control-group">
+        <div class="span2">
+            {{ form_label(form.street) }}
+        </div>
+        <div class="span3">
+            {{ form_widget(form.street) }}
+        </div>
+        <div class="span7 help-block">
+            {{ form_errors(form.street) }}
+        </div>
+    </div>
+    <div class="row-fluid control-group">
+        <div class="span2">
+            {{ form_label(form.postalcode) }}
+        </div>
+        <div class="span3">
+            {{ form_widget(form.postalcode) }}
+        </div>
+        <div class="span7 help-block">
+            {{ form_errors(form.postalcode) }}
+        </div>
+    </div>
+    <div class="row-fluid control-group">
+        <div class="span2">
+            {{ form_label(form.city) }}
+        </div>
+        <div class="span3">
+            {{ form_widget(form.city) }}
+        </div>
+        <div class="span7 help-block">
+            {{ form_errors(form.city) }}
+        </div>
+    </div>
+
+
 
 
         <input type="submit" value="{{ 'profile.edit.submit'|trans({}, 'FOSUserBundle') }}" />
-    </div>
+
+
 </form>

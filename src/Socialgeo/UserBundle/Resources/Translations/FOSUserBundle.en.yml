@@ -35,8 +35,16 @@ profile:
         postalcode: Zip
         city: City
     edit:
-        submit: Update
-        name: Naam
+        username: Username
+        name: Name
+        email: Email
+        lastname: Lastname
+        gender: Gender
+        birthday: Birthday
+        nationality: Nationality
+        street: Street + Nr
+        postalcode: Zip
+        city: City
 
 
     flash:
