@@ -18,10 +18,11 @@
         "sensio/framework-extra-bundle": "2.1.*",
         "sensio/generator-bundle": "2.1.*",
         "jms/security-extra-bundle": "1.2.*",
-        "jms/di-extra-bundle": "1.1.*",
+        "jms/di-extra-bundle": "dev-master",
         "kriswallsmith/assetic": "1.1.*@dev",
         "doctrine/doctrine-fixtures-bundle": "dev-master",
-        "friendsofsymfony/user-bundle": "*"
+        "friendsofsymfony/user-bundle": "*",
+        "friendsofsymfony/comment-bundle": "2.0.0"
     },
     "scripts": {
         "post-install-cmd": [

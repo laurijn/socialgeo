@@ -67,3 +67,4 @@ fos_user:
     registration:
             form:
                 type: socialgeo_user_registration
+

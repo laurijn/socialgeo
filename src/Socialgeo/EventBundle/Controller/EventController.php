@@ -4,7 +4,8 @@ namespace Socialgeo\EventBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
+use Symfony\Component\DependencyInjection\ContainerAware;
+use Symfony\Component\Security\Core\SecurityContext;
 use Socialgeo\EventBundle\Entity\Event;
 
 
@@ -20,17 +21,15 @@ class EventController extends Controller
      */
     public function indexAction()
     {
-        //$user = $this->container->get('fos_user.user_manager')
-        //            ->findUserByUsername('laurijn');
-        $user = $this->container->get('security.context')
-                    ->getToken()
-                    ->getUser();
+        $user = $this->container->get('fos_user.user_manager')->findUserByUsername('laurijn');
+
+        $csrfToken = $this->container->get('form.csrf_provider')->generateCsrfToken('authenticate');
 
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('EventBundle:Event')->findAll();
 
-        $data = array('entities' => $entities, 'user' => $user);
+        $data = array('entities' => $entities, 'user' => $user, 'csrf_generated' => $csrfToken );
 
         return $this->render('EventBundle:Event:index.html.twig', $data );
 
