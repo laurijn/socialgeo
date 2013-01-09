@@ -27,6 +27,13 @@ profile:
         username: Username
         name: Name
         email: Email
+        lastname: Lastname
+        gender: Gender
+        birthday: Birthday
+        nationality: Nationality
+        street: Street + Nr
+        postalcode: Zip
+        city: City
     edit:
         submit: Update
         name: Naam
@@ -93,6 +100,9 @@ form:
     group_name: "Group name:"
     username: "Username:"
     username_placeholder: "choose username (optional)"
+
+    name: "Name:"
+    name_placeholder: "Your name"
 
     email: "Email:"
     email_placeholder: "enter email"

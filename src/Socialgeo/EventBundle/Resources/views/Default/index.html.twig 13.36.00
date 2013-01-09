@@ -1,0 +1,7 @@
+{% extends '::base.html.twig' %}
+
+{% block login %}
+
+    {% render 'FOSUserBundle:Security:login' %}
+
+{% endblock %}
