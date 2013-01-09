@@ -15,8 +15,15 @@ class WijkController extends Controller
 
 
         $variable = file_get_contents('http://datatank.gent.be/Grondgebied/Wijken.json');
-        $decoded = json_decode($variable);;
+        $decoded = json_decode($variable, true);
+        $wijken = $decoded["Wijken"];
 
+        foreach ($wijken['wijk'] as $wijk)
+        {
+            var_dump("wijk:". $wijken['wijk'] ."\n");
+        };
+
+        die;
 
 
         $data = array('csrf_generated' => $csrfToken, 'json' => $decoded );
